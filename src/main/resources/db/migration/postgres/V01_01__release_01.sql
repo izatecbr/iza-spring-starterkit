@@ -16,16 +16,13 @@ CREATE TABLE public.tab_profile_role (
 	CONSTRAINT pk_profile_role PRIMARY KEY (id)
 );
 --role é a composição dos enums: Functionality_Operation
-INSERT INTO public.tab_profile_role (role,profile_id) VALUES('USERS_MENU',1); --'MANAGER'
+
 INSERT INTO public.tab_profile_role (role,profile_id) VALUES('USERS_FULL',1);
-INSERT INTO public.tab_profile_role (role,profile_id) VALUES('CUSTOMERS_MENU',1);
-INSERT INTO public.tab_profile_role (role,profile_id) VALUES('CUSTOMERS_SELECT',1);
+INSERT INTO public.tab_profile_role (role,profile_id) VALUES('CUSTOMERS_FULL',1); --só pode selecionar
+INSERT INTO public.tab_profile_role (role,profile_id) VALUES('PRODUCTS_INSERT',1);
 
-INSERT INTO public.tab_profile_role (role,profile_id) VALUES('CUSTOMERS_MENU',2); --'FORMALIZATION'
-INSERT INTO public.tab_profile_role (role,profile_id) VALUES('CUSTOMERS_FULL',2);
-
---INSERT INTO public.tab_profile_role (role,profile) VALUES('PRODUCTS_MENU','FORMALIZATION');
---INSERT INTO public.tab_profile_role (role,profile) VALUES('PRODUCTS_FULL','FORMALIZATION');
+INSERT INTO public.tab_profile_role (role,profile_id) VALUES('CUSTOMERS_FULL',2); -- acesso total
+INSERT INTO public.tab_profile_role (role,profile_id) VALUES('PRODUCTS_FULL',2); -- acesso total
 
 
 CREATE TABLE public.tab_user (

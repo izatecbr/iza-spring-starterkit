@@ -40,8 +40,20 @@ public class WebSecurityConfig {
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers(SWAGGER_WHITELIST).permitAll()
                         .requestMatchers(HttpMethod.POST, "/auth/**").permitAll()
-                        .requestMatchers("/customers/**").permitAll()
-                        .requestMatchers("/products/**").permitAll()
+                        //.requestMatchers("/customers/**").permitAll()
+                        //.requestMatchers("/products/**").permitAll()
+
+                        .requestMatchers(HttpMethod.POST,"/customers").hasAnyRole("CUSTOMERS_FULL","CUSTOMERS_INSERT")
+                        .requestMatchers(HttpMethod.PUT,"/customers/**").hasAnyRole("CUSTOMERS_FULL","CUSTOMERS_UPDATE")
+                        .requestMatchers(HttpMethod.GET,"/customers").hasAnyRole("CUSTOMERS_FULL","CUSTOMERS_SEARCH")
+                        .requestMatchers(HttpMethod.GET,"/customers/**").hasAnyRole("CUSTOMERS_FULL","CUSTOMERS_FIND")
+
+                        .requestMatchers(HttpMethod.POST,"/products").hasAnyRole("PRODUCTS_FULL","PRODUCTS_INSERT")
+                        .requestMatchers(HttpMethod.PUT,"/products/**").hasAnyRole("PRODUCTS_FULL","PRODUCTS_UPDATE")
+                        .requestMatchers(HttpMethod.GET,"/products").hasAnyRole("PRODUCTS_FULL","PRODUCTS_SEARCH")
+                        .requestMatchers(HttpMethod.GET,"/products/**").hasAnyRole("PRODUCTS_FULL","PRODUCTS_FIND")
+
+
                         .anyRequest().authenticated()
                 ).addFilterAfter(filter, UsernamePasswordAuthenticationFilter.class)
                 .build();
