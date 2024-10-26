@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 
 public class JwtManager {
     //pode estar um properties
-    public static final String SECRET_KEY = "P9OkmsJkl66B5ZyMMBhfspTaPpOrUCka9WPzdNC/PdkDqatmwYkcFZxdr0VfeojUwj901CMG/EmBaKCKtXRj+w==";
+    public static final String SECRET_KEY = "EoW7L3PJBPtRJlpk88WR+guBA2UVPtrOtU3CDolYam847/rIfyEUqtwXXDnumBeeb5EN6Y2Hainn+1Wa+xhFPA==";
     public static final String HEADER_AUTHORIZATION = "Authorization";
     public static final String ROLES_AUTHORITIES = "authorities";
 
