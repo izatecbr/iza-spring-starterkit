@@ -24,9 +24,6 @@ INSERT INTO public.tab_profile_role (role,profile_id) VALUES('CUSTOMERS_SELECT',
 INSERT INTO public.tab_profile_role (role,profile_id) VALUES('CUSTOMERS_MENU',2); --'FORMALIZATION'
 INSERT INTO public.tab_profile_role (role,profile_id) VALUES('CUSTOMERS_FULL',2);
 
---INSERT INTO public.tab_profile_role (role,profile) VALUES('PRODUCTS_MENU','FORMALIZATION');
---INSERT INTO public.tab_profile_role (role,profile) VALUES('PRODUCTS_FULL','FORMALIZATION');
-
 
 CREATE TABLE public.tab_user (
 	login varchar(10) NOT NULL,
