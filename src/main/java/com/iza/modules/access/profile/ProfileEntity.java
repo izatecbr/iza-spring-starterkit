@@ -19,7 +19,7 @@ public class ProfileEntity {
     private String description;
     @ElementCollection
     @CollectionTable(schema = "public", name="tab_profile_role",
-            joinColumns=@JoinColumn(name="profile")
+            joinColumns=@JoinColumn(name="profile_id")
     )
     @Column(name = "role")
     private List<String> roles;

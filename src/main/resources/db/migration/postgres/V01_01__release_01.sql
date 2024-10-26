@@ -30,13 +30,13 @@ INSERT INTO public.tab_profile_role (role,profile_id) VALUES('CUSTOMERS_FULL',2)
 
 CREATE TABLE public.tab_user (
 	login varchar(10) NOT NULL,
-	password varchar(50) NULL,
+	password varchar(100) NULL,
 	profile_id varchar(5) NULL,
 	CONSTRAINT pk_user PRIMARY KEY (login)
 );
 
-INSERT INTO public.tab_user (login, password, profile_id) VALUES('gleyson','IzaTec@2024',1); --'MANAGER'
-INSERT INTO public.tab_user (login, password, profile_id) VALUES('izabelly','IzaTec@2024',2);--'FORMALIZATION'
+INSERT INTO public.tab_user (login, password, profile_id) VALUES('gleyson','$2a$10$gTEehcMFwQAfArLkZyZdAuTUWCp2WkpSuBGAXakStd6GFM2p63Olm',1); --'MANAGER'
+INSERT INTO public.tab_user (login, password, profile_id) VALUES('izabelly','$2a$10$gTEehcMFwQAfArLkZyZdAuTUWCp2WkpSuBGAXakStd6GFM2p63Olm',2);--'FORMALIZATION'
 
 CREATE TABLE public.tab_menu (
 	id serial not null,

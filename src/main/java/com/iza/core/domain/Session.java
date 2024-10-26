@@ -1,4 +1,4 @@
-package com.iza.core;
+package com.iza.core.domain;
 
 import lombok.Data;
 
